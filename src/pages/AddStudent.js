@@ -7,11 +7,11 @@ import axios from 'axios';
 
 const AddStudent = () => {
   const navigate=useNavigate()
-  const [studentNo,setStudentNo]=useState("")
-  const [name,setName]=useState("")
-  const [surName,setSurname]=useState("")
-  const [studentClass,setStudentClass]=useState("")
-  const [schoolName,setSchoolName]=useState("")
+  const [studentNo,setStudentNo]=useState("");
+  const [name,setName]=useState("");
+  const [surName,setSurname]=useState("");
+  const [studentClass,setStudentClass]=useState("");
+  const [schoolName,setSchoolName]=useState("");
   
   const handleSave=(event)=>{
     event.prevenDefault()
