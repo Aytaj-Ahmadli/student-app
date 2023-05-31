@@ -1,19 +1,25 @@
 import React from "react";
 
 import axios from "axios";
+
+import { useNavigate } from "react-router-dom";
+
 import { Link } from "react-router-dom";
 
 const ListStudents = (props) => {
-  const { students, setStudents } = props;
+  const navigate=useNavigate()
+  const { students, setStudents,reRender,setReRender} = props;
 
   const handleDelete = (student) => {
+
+
     axios
       .delete(`http://localhost:3004/students/${student.id}`)
       .then((res) => {
         const filteredStudents = students.filter(
           (item) => item.id !== student.id
         );
-        setStudents(filteredStudents);
+      setStudents(filteredStudents);
       })
       .catch((err) => {
         console.log(err);
@@ -76,6 +82,7 @@ const ListStudents = (props) => {
             </>
           )}
         </tbody>
+        
       </table>
     </div>
   );

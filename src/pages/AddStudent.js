@@ -1,8 +1,12 @@
 import React,{useState} from "react";
 
 import Header from "../components/Header";
+import { useNavigate } from "react-router-dom";
+
+import axios from 'axios';
 
 const AddStudent = () => {
+  const navigate=useNavigate()
   const [studentNo,setStudentNo]=useState("")
   const [name,setName]=useState("")
   const [surName,setSurname]=useState("")
@@ -21,7 +25,23 @@ const AddStudent = () => {
         alert("!!!!")
         return
       }
-  }
+      const newStudent={
+        id:String(new Date().getTime()),
+        name:name,
+        surname:surName,
+        studentNo:studentNo,
+        studentClass:studentClass,
+        schoolName:schoolName,
+      }
+   axios.post("http://localhost:3004/students",newStudent)
+   .then(res=>{
+     navigate("/")
+   })
+   .catch(err=>{
+     console.log(err);
+     alert("Kayit isleminde bir sorun olustu")
+   })
+  };
   
   return (
     <div>

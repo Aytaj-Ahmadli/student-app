@@ -32,14 +32,17 @@ const Home = () => {
       <Header />
       <div className="container mt-5 d-flex justify-content-end">
         <button
-          onClick={() => navigate("/add-student")}
-          className="btn btn-primary">
-          Yeni Öğrenci Ekle
+          onClick={() =>
+           navigate("/add-student")}
+           className="btn btn-primary">
+          Add new Student
         </button>
       </div>
       <ListStudents
         students={students}
         setStudents={setStudents}
+        reRender={reRender}
+        setRerender={setRerender}
       />
     </div>
   );

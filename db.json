@@ -1,12 +1,3 @@
 {
-  "students": [
-    {
-      "id": "2",
-      "name": "Ahmet",
-      "surname": "Recep",
-      "studentNo": "183",
-      "studentClass": "4/C",
-      "schoolName": "Oxford 4/8/6"
-    }
-  ]
+  "students": []
 }
