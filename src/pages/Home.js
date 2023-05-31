@@ -5,7 +5,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 import Header from "../components/Header";
-import ListStudents from "../components/ListStudents"
+import ListStudents from "../components/ListStudents";
+
+
 
 const Home = () => {
   const [students, setStudents] = useState(null);
