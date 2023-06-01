@@ -21,7 +21,7 @@ const EditStudent = () => {
       .get(`http://localhost:3004/students/${studentId}`)
       .then((res) => {
         console.log(res.data);
-        setWillEditStudent(res.data)
+        setWillEditStudent(res.data);
         setStudentNo(res.data.studentNo);
         setName(res.data.name);
         setSurname(res.data.surName);
@@ -65,7 +65,7 @@ const EditStudent = () => {
         navigate("/");
       })
        .catch(err=>{})
-           console.log(err);
+           console.log();
            alert("!!!!!!!!!!");
   };
 
