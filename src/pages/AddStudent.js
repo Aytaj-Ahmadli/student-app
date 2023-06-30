@@ -15,14 +15,14 @@ const AddStudent = () => {
   
   const handleSave=(event)=>{
     event.prevenDefault()
-    //validation
+   
     if(
       studentNo === "" || 
       name === "" || 
       surName === "" ||
       studentClass === ""
       ){
-        alert("!!!!")
+        alert("!")
         return
       }
       const newStudent={

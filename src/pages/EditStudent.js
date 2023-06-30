@@ -66,7 +66,7 @@ const EditStudent = () => {
       })
        .catch(err=>{})
            console.log();
-           alert("!!!!!!!!!!");
+           alert("!");
   };
 
   if (willEditStudent === null) {
